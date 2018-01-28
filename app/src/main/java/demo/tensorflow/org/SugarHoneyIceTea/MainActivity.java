@@ -15,6 +15,14 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     static HashMap<Drink, Integer> totalHashMap = new HashMap<Drink, Integer>();
+    final double MAX_ENERGY = 2080;
+    final double MAX_FAT = 70;
+    final double MAX_SATURATED = 24;
+    final double MAX_CARBS = 310;
+    final double MAX_SUGAR = 90;
+    final double MAX_PROTEINS = 50;
+    final double MAX_SALT = 2.3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -255,11 +263,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         energyText.setText(String.valueOf(totalEnergy));
+        if(totalEnergy >= MAX_ENERGY){
+            energyText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         fatText.setText(String.valueOf(totalFat));
+        if(totalFat >= MAX_FAT){
+            fatText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         saturatesText.setText(String.valueOf(totalSaturate));
+        if(totalSaturate >= MAX_SATURATED){
+            saturatesText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         carbText.setText(String.valueOf(totalCarbs));
+        if(totalCarbs >= MAX_CARBS){
+            carbText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         sugarText.setText(String.valueOf(totalSugar));
+        if(totalSugar >= MAX_SUGAR){
+            sugarText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         proteinText.setText(String.valueOf(totalProtein));
+        if(totalProtein >= MAX_PROTEINS){
+            proteinText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         saltText.setText(String.valueOf(totalSalt));
+        if(totalSalt >= MAX_SALT){
+            saltText.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
     }
 }
