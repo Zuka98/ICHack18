@@ -52,7 +52,7 @@ public class RecognitionScoreView extends View implements ResultsView {
     @Override
     public void onDraw(final Canvas canvas) {
 
-        fgPaint.setColor(Color.WHITE);
+        fgPaint.setColor(Color.BLACK);
 
         if (results != null && results.size() > 0) {
             int y = (int) (fgPaint.getTextSize() * 1.4f);

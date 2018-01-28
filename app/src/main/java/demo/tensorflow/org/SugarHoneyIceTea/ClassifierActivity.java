@@ -50,6 +50,48 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
     private BorderedText borderedText;
 
+    //Sidak Stuff
+    static Drink up7 = new Drink("7-UP", 23.00 , 23.00 , 0 , 0 , 0.11 , 95, 0 );
+    static Drink cocaCola = new Drink("Coca Cola", 37.00 , 37.00, 0 , 0 , 0 , 149, 0);
+    static Drink dietCola = new Drink ("Coca Cola Light", 0 , 0 , 0 , 0 , 0 , 1, 0);
+    static Drink zeroCola = new Drink("Coca Cola Zero", 0 , 0 , 0 , 0 , 0 , 1, 0);
+    static Drink fantaFruitTwist = new Drink("Fanta Fruit Twist", 21.00, 21.00 , 0 , 0 , 0 , 86, 0);
+    static Drink fantaOrange = new Drink("Fanta Orange", 15.00, 15.00 , 0 , 0 , 0 , 63, 0);
+    static Drink fantaLemon = new Drink("Fanta Lemon", 27.00 , 27.00 , 0 , 0 , 0 , 112, 0);
+    static Drink drPepper = new Drink("Dr Pepper", 24.00 , 24.00 , 0 ,0, 0 , 96, 0);
+    static Drink redBull = new Drink("RedBull", 27.50 , 27.50 , 0 , 0 , 0.2 , 115, 0);
+    static Drink redBullSugarFree = new Drink ("RedBull Sugar-Free" , 0 , 0 , 0 , 0 , 0.1 , 7.5, 0);
+    static Drink boostEnergy = new Drink("Boost Energy", 27.20 , 26.40 , 0 , 0 , 0.19 , 118, 0);
+    static Drink fruitShootApple = new Drink("Fruit Shoot Apple and Blackcurrant", 2.20 , 2.20 , 0 , 0 , 0.08, 14.00, 0);
+    static Drink fruitShootOrange = new Drink("Fruit Shoot Orange",2.20 , 2.20 , 0 , 0 , 0.08, 14.00, 0);
+    static Drink mountainDew = new Drink ("Mountain Dew" , 43.00 , 43.00 , 0 , 0 , 0.7 , 158, 0);
+    static Drink rioTropical = new Drink ("Rio Tropical" , 35.60 , 35.60 , 0 , 0 , 0 , 149, 0);
+    static Drink liptonIceTea = new Drink("Lipton Ice Tea", 24.00, 22.00, 1.00, 1.00, 0.32, 96.00, 0.20);
+    static Drink springWater = new Drink("Camlica Water", 0, 0, 0, 0, 0, 0, 0);
+
+
+    public static ArrayList<Drink> drinkArrayList = new ArrayList<Drink>(){
+        {
+            add(up7);
+            add(cocaCola);
+            add(dietCola);
+            add(zeroCola);
+            add(fantaFruitTwist);
+            add(fantaLemon);
+            add(fantaOrange);
+            add(drPepper);
+            add(redBull);
+            add(redBullSugarFree);
+            add(boostEnergy);
+            add(fruitShootApple);
+            add(fruitShootOrange);
+            add(mountainDew);
+            add(rioTropical);
+            add(liptonIceTea);
+            add(springWater);
+        }
+    };
+
     @Override
     protected int getLayoutId() {
         return R.layout.camera_connection_fragment;
@@ -67,7 +109,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         final float textSizePx = TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
         borderedText = new BorderedText(textSizePx);
-        borderedText.setTypeface(Typeface.MONOSPACE);
+        borderedText.setTypeface(Typeface.DEFAULT_BOLD);
 
         classifier = new MSCognitiveServicesClassifier(ClassifierActivity.this);
 
@@ -119,7 +161,8 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                         resultsView.setResults(results);
                         requestRender();
                         if(!results.isEmpty()){
-                            showDialogue();
+                            //String to search with : results.get(0).getTitle()
+                            showDialogue(getDrinkByName(results.get(0).getTitle()));
                             LOGGER.d("Started Intent");
                             return;
                         }
@@ -132,7 +175,17 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
     }
 
-    private void showDialogue(){
+   private Drink getDrinkByName(String result){
+        Drink answer =  new Drink("", 0, 0, 0, 0, 0, 0, 0);
+        for(Drink d : drinkArrayList){
+            if(d.getName().equals(result)){
+                answer = d;
+            }
+        }
+        return answer;
+   }
+
+    private void showDialogue(final Drink drink){
         //set up dialog
         final Dialog dialog = new Dialog(ClassifierActivity.this);
         dialog.setContentView(R.layout.activity_sample_dialogue);
@@ -140,8 +193,24 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         //there are a lot of settings, for dialog, check them all out!
 
         //set up text
-        TextView text = (TextView) dialog.findViewById(R.id.TextView01);
-        text.setText("Sample Af Text");
+        TextView nameText = (TextView) dialog.findViewById(R.id.item_name);
+        TextView energyText = (TextView) dialog.findViewById(R.id.item_energy);
+        TextView fatText = (TextView) dialog.findViewById(R.id.item_fat);
+        TextView carbText = (TextView) dialog.findViewById(R.id.item_carb);
+        TextView proteinText = (TextView) dialog.findViewById(R.id.item_protein);
+        TextView saltText = (TextView) dialog.findViewById(R.id.item_salt);
+        TextView saturatedText = (TextView) dialog.findViewById(R.id.item_saturates);
+        TextView sugarText = (TextView) dialog.findViewById(R.id.item_sugars);
+
+        nameText.setText(drink.getName());
+        energyText.setText(String.valueOf(drink.getEnergy()));
+        fatText.setText(String.valueOf(drink.getFat()));
+        carbText.setText(String.valueOf(drink.getCarbohydrates()));
+        proteinText.setText(String.valueOf(drink.getProtein()));
+        saltText.setText(String.valueOf(drink.getSalt()));
+        saturatedText.setText(String.valueOf(drink.getSaturates()));
+        sugarText.setText(String.valueOf(drink.getSugar()));
+
 
         //set up button
         Button button = (Button) dialog.findViewById(R.id.Button01);
@@ -149,6 +218,18 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             @Override
             public void onClick(View v) {
                 dialog.cancel();
+                computing = false;
+            }
+        });
+
+        Button button1 = (Button) dialog.findViewById(R.id.Button02);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.cancel();
+                Intent i = new Intent(view.getContext(), MainActivity.class);
+                i.putExtra("drinkUpdate", drink.getName());
+                startActivity(i);
             }
         });
         //now that the dialog is set up, it's time to show it

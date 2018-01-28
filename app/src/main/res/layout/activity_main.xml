@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="demo.tensorflow.org.SugarHoneyIceTea.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -80,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="Saturates (g)"/>
+                android:text="\t \t of which Saturates (g)"/>
 
             <TextView
                 android:id="@+id/saturates_text"
@@ -126,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="Sugars (g)"/>
+                android:text="\t \t of which Sugars (g)"/>
 
             <TextView
                 android:id="@+id/sugars_text"
@@ -189,42 +193,54 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_marginTop="50dp"
-            android:background="#E1BEE7"/>
+            android:layout_marginTop="70dp"
+            android:background="#FF787878"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="30dp">
 
             <Button
                 android:id="@+id/camera_button"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/ic_photo_camera_black_24dp"
-                android:backgroundTint="#E1BEE7"
+                android:backgroundTint="#90CAF9"
                 android:textSize="10sp"
-                android:text="\n I'll show you what i had"/>
+                android:text="\n Scan"/>
 
-            <Button
+            <!--Button
                 android:id="@+id/voice_button"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/ic_record_voice_over_black_24dp"
                 android:textSize="10sp"
                 android:backgroundTint="#E1BEE7"
-                android:text="\n I'll tell you what i had"/>
+                android:text="\n I'll tell you what i had"/-->
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_marginTop="50dp"
-            android:background="#E1BEE7"/>
+            android:layout_marginTop="30dp"
+            android:background="#FF787878"/>
 
     </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/total_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_format_list_bulleted_black_24dp"
+        android:backgroundTint="#FF8A65"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textSize="10sp"
+        android:text="\n Show total Intake"/>
+
+</RelativeLayout>

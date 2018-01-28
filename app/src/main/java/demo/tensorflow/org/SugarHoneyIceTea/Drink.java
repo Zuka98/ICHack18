@@ -3,14 +3,15 @@ package demo.tensorflow.org.SugarHoneyIceTea;
 public class Drink {
     
     private String name;
-    private double carbohydrates, sugar, protein, fat, salt, energy;
-    public Drink(String name, double carbohydrates, double sugar, double protein,  double fat, double salt, double energy){
+    private double carbohydrates, sugar, protein, fat, salt, energy, saturates;
+    public Drink(String name, double carbohydrates, double sugar, double protein,  double fat, double salt, double energy, double saturates){
         this.name = name;
         this.carbohydrates = carbohydrates;
         this.sugar = sugar;
         this.protein = protein;
         this.fat = fat;
         this.salt = salt;
+        this.saturates = saturates;
         this.energy = energy;
     }
 
@@ -70,7 +71,15 @@ public class Drink {
         this.energy = energy;
     }
 
-        Drink up7 = new Drink("7UP", 23.00 , 23.00 , 0 , 0 , 0.11 , 95 );
+    public double getSaturates() {
+        return saturates;
+    }
+
+    public void setSaturates(double saturates) {
+        this.saturates = saturates;
+    }
+
+    /*Drink up7 = new Drink("7UP", 23.00 , 23.00 , 0 , 0 , 0.11 , 95 );
         Drink cocaCola = new Drink("CocaCola", 37.00 , 37.00, 0 , 0 , 0 , 149);
         Drink diet_Cola = new Drink ("Diet Cocacola", 0 , 0 , 0 , 0 , 0 , 1);
         Drink zero_Cola = new Drink("Cocacola Zero", 0 , 0 , 0 , 0 , 0 , 1);
@@ -84,7 +93,7 @@ public class Drink {
         Drink fruitShoot_Apple = new Drink("Fruit Shoot Apple and Blackcurrant", 2.20 , 2.20 , 0 , 0 , 0.08, 14.00);
         Drink fuitShoot_Orange = new Drink("Fruit Shoot Orange",2.20 , 2.20 , 0 , 0 , 0.08, 14.00);
         Drink mountainDew = new Drink ("Mountain Dew " , 43.00 , 43.00 , 0 , 0 , 0.7 , 158);
-        Drink Rio_Tropical = new Drink ("Rio Tropical" , 35.60 , 35.60 , 0 , 0 , 0 , 149);
+        Drink Rio_Tropical = new Drink ("Rio Tropical" , 35.60 , 35.60 , 0 , 0 , 0 , 149);*/
 }
 
 

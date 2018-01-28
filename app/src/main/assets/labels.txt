@@ -1,13 +1,17 @@
-7UP
+7-UP
 Boost Energy
 Coca Cola
+Coca Cola Light
+Coca Cola Zero
 Dr Pepper
 Fanta FruitTwist
 Fanta Lemon
 Fanta Orange
 Fruit Shoot Apple And Blackcurrant
 Fruit Shoot Orange
+Lipton Icy Tea
 Mountain Dew
 RedBull EnergyDrink
 RedBull Sugar free EnergyDrink
 Rio Tropical
+Camlica Water

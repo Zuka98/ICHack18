@@ -19,10 +19,17 @@
 
     <demo.tensorflow.org.SugarHoneyIceTea.AutoFitTextureView
         android:id="@+id/texture"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/results"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Detected:"/>
     <demo.tensorflow.org.SugarHoneyIceTea.RecognitionScoreView
         android:id="@+id/results"
         android:layout_height="50dp"
@@ -32,7 +39,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-
         android:layout_alignParentTop="false" />
 
     <demo.tensorflow.org.SugarHoneyIceTea.OverlayView
