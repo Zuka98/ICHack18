@@ -7,11 +7,11 @@ Dr Pepper
 Fanta FruitTwist
 Fanta Lemon
 Fanta Orange
-Fruit Shoot Apple And Blackcurrant
+Fruit Shoot Apple
 Fruit Shoot Orange
-Lipton Icy Tea
+Lipton Ice Tea
 Mountain Dew
-RedBull EnergyDrink
-RedBull Sugar free EnergyDrink
+RedBull
+RedBull Sugar Free
 Rio Tropical
 Camlica Water

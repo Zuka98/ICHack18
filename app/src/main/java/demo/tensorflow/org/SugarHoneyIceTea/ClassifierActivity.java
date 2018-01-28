@@ -55,14 +55,14 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     static Drink cocaCola = new Drink("Coca Cola", 37.00 , 37.00, 0 , 0 , 0 , 149, 0);
     static Drink dietCola = new Drink ("Coca Cola Light", 0 , 0 , 0 , 0 , 0 , 1, 0);
     static Drink zeroCola = new Drink("Coca Cola Zero", 0 , 0 , 0 , 0 , 0 , 1, 0);
-    static Drink fantaFruitTwist = new Drink("Fanta Fruit Twist", 21.00, 21.00 , 0 , 0 , 0 , 86, 0);
+    static Drink fantaFruitTwist = new Drink("Fanta FruitTwist", 21.00, 21.00 , 0 , 0 , 0 , 86, 0);
     static Drink fantaOrange = new Drink("Fanta Orange", 15.00, 15.00 , 0 , 0 , 0 , 63, 0);
     static Drink fantaLemon = new Drink("Fanta Lemon", 27.00 , 27.00 , 0 , 0 , 0 , 112, 0);
     static Drink drPepper = new Drink("Dr Pepper", 24.00 , 24.00 , 0 ,0, 0 , 96, 0);
     static Drink redBull = new Drink("RedBull", 27.50 , 27.50 , 0 , 0 , 0.2 , 115, 0);
-    static Drink redBullSugarFree = new Drink ("RedBull Sugar-Free" , 0 , 0 , 0 , 0 , 0.1 , 7.5, 0);
+    static Drink redBullSugarFree = new Drink ("RedBull Sugar Free" , 0 , 0 , 0 , 0 , 0.1 , 7.5, 0);
     static Drink boostEnergy = new Drink("Boost Energy", 27.20 , 26.40 , 0 , 0 , 0.19 , 118, 0);
-    static Drink fruitShootApple = new Drink("Fruit Shoot Apple and Blackcurrant", 2.20 , 2.20 , 0 , 0 , 0.08, 14.00, 0);
+    static Drink fruitShootApple = new Drink("Fruit Shoot Apple", 2.20 , 2.20 , 0 , 0 , 0.08, 14.00, 0);
     static Drink fruitShootOrange = new Drink("Fruit Shoot Orange",2.20 , 2.20 , 0 , 0 , 0.08, 14.00, 0);
     static Drink mountainDew = new Drink ("Mountain Dew" , 43.00 , 43.00 , 0 , 0 , 0.7 , 158, 0);
     static Drink rioTropical = new Drink ("Rio Tropical" , 35.60 , 35.60 , 0 , 0 , 0 , 149, 0);
@@ -150,7 +150,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
                         final List<Classifier.Recognition> results = new ArrayList<>();
 
-                        if (r.getConfidence() > 0.7) {
+                        if (r.getConfidence() > 0.8) {
                             results.add(r);
                         }
 

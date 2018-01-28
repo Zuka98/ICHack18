@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="600dp"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/intake_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:layout_marginTop="3dp"
+        android:text="Your Total Intake"/>
+
+    <LinearLayout
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/black"
+            android:text="Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:layout_marginRight="50dp"
+            android:textColor="@android:color/black"
+            android:text="Quantity"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/up7_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="7-UP"/>
+
+            <TextView
+                android:id="@+id/up7_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cocacola_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Coca Cola"/>
+
+            <TextView
+                android:id="@+id/cocacola_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dietCola_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Coca Cola Light"/>
+
+            <TextView
+                android:id="@+id/dietCola_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/zeroCola_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Coca Cola Zero"/>
+
+            <TextView
+                android:id="@+id/zeroCola_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fantaFruitTwist_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Fanta FruitTwist"/>
+
+            <TextView
+                android:id="@+id/fantaFruitTwist_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fantaOrange_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Fanta Orange"/>
+
+            <TextView
+                android:id="@+id/fantaOrange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fantaLemon_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Fanta Lemon"/>
+
+            <TextView
+                android:id="@+id/fantaLemon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/drPepper_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Dr Pepper"/>
+
+            <TextView
+                android:id="@+id/drPepper_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/redBull_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="RedBull"/>
+
+            <TextView
+                android:id="@+id/redBull_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/redBullSugarFree_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="RedBull Sugar Free"/>
+
+            <TextView
+                android:id="@+id/redBullSugarFree_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/boost_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Boost Energy"/>
+
+            <TextView
+                android:id="@+id/boost_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fruitOrange_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Fruit Shoot Orange"/>
+
+            <TextView
+                android:id="@+id/fruitOrange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fruitApple_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Fruit Shoot Apple"/>
+
+            <TextView
+                android:id="@+id/fruitApple_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mountainDew_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Mountain Dew"/>
+
+            <TextView
+                android:id="@+id/mountainDew_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rio_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Rio Tropical"/>
+
+            <TextView
+                android:id="@+id/rio_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lipton_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Lipton Ice Tea"/>
+
+            <TextView
+                android:id="@+id/lipton_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/water_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Camlica Water"/>
+
+            <TextView
+                android:id="@+id/water_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="30dp"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
